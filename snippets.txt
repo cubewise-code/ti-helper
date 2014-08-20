@@ -1,0 +1,23 @@
+#########################################################################################
+#
+# Comment lines should begin with a '#' character
+#
+# To enter a new snippet, you must enter it in the format:
+# Snippet Name||||Snippet Code
+# Snippet Name = the text that will show up in the menu
+# Snippet Code = the text that will be sent to the TI editor window
+#
+# Notes:
+# - To add multiple lines to the 'Snippet code' use '{Enter}'.
+# - Some characters are reserved keys in autohotkey, suchas the # character
+#   in order to add these characters you must wrap them in the {} brackets (i.e., {#})
+#
+#########################################################################################
+While - Dimension||||sDim = '';{Enter}nMax = DIMSIZ(sDim);{Enter}nCtr = 1;{Enter}WHILE(nCtr <= nMax);{Enter}{Enter}  sEl = DIMNM(sDim, nCtr);{Enter}{Enter}  nCtr = nCtr {+} 1;{Enter}END;
+While - Dimension - Reverse||||sDim = '';{Enter}nCtr = DIMSIZ(sDim);{Enter}WHILE(nCtr > 0);{Enter}{Enter}  sEl = DIMNM(sDim, nCtr);{Enter}{Enter}  nCtr = nCtr {-} 1;{Enter}END;
+While - Subset||||sDim = ''; sSub = '';{Enter}nMax = SubsetGetSize(sDim,sSub);{Enter}nCtr = 1;{Enter}WHILE(nCtr <= nMax);{Enter}{Enter}  sEl = SubsetGetElementName(sDim,sSub,nCtr);{Enter}{Enter}  nCtr = nCtr {+} 1;{Enter}END;
+While - Subset - Reverse||||sDim = ''; sSub = '';{Enter}nCtr = SubsetGetSize(sDim,sSub);{Enter}WHILE(nCtr > 0);{Enter}{Enter}  sEl = SubsetGetElementName(sDim,sSub,nCtr);{Enter}{Enter}  nCtr = nCtr {-} 1;{Enter}END;
+While - Consol||||sDim = ''; sCnsl = '';{Enter}nMax = ELCOMPN(sDim,sCnsl);{Enter}nCtr = 1;{Enter}WHILE(nCtr <= nMax);{Enter}{Enter}  sEl = ELCOMP(sDim,sCnsl,nCtr);{Enter}{Enter}  nCtr = nCtr {+} 1;{Enter}END;
+While - Consol - Reverse||||sDim = ''; sCnsl = '';{Enter}nCtr = ELCOMPN(sDim,sCnsl);{Enter}WHILE(nCtr > 0);{Enter}{Enter}  sEl = ELCOMP(sDim,sCnsl,nCtr);{Enter}{Enter}  nCtr = nCtr {-} 1;{Enter}END;
+Get Date String||||{#} Returns date in 20110101 format{Enter}sDt =  TIMST(NOW(),'\Y\m\d');
+Get Day of Week||||{#} Returns day in Ddd (Thu) format{Enter}sDate = '2011-01-01';{Enter}nDate = INT(DAYNO(sDate)) {+} 21916;{Enter}sDayOfWeek = NumberToStringEx(nDate, 'ddd', '', '');

@@ -1,0 +1,299 @@
+##############################################
+#
+# Format for functions is:
+# Function Name||||Function Code||||Parent Menu
+#
+##############################################
+
+##############################################
+#
+# Bedrock Processes
+#
+##############################################
+Bedrock.Cube.Clone||||ExecuteProcess('Bedrock.Cube.Clone'{Enter}  , 'pSourceCube', ''{Enter}  , 'pTargetCube', ''{Enter}  , 'pIncludeRules', 1{Enter}  , 'pIncludeData', 0{Enter}  , 'pSourceView', ''{Enter}  , 'pRuleValues', 1{Enter}  , 'pDebug', 0{Enter});||||Bedrock.CubeSubmenu
+Bedrock.Cube.Data.Clear||||ExecuteProcess('Bedrock.Cube.Data.Clear'{Enter}  , 'pCube', ''{Enter}  , 'pView', ''{Enter}  , 'pFilter', ''{Enter}  , 'pDimensionDelim', '&'{Enter}  , 'pElementStartDelim', ':'{Enter}  , 'pElementDelim', '{+}'{Enter}  , 'pDestroyTempObj', 1{Enter}  , 'pDebug', 0{Enter});||||Bedrock.CubeSubmenu
+Bedrock.Cube.Data.Copy||||ExecuteProcess('Bedrock.Cube.Data.Copy'{Enter}  , 'pCube', ''{Enter}  , 'pViewSource', ''{Enter}  , 'pViewTarget', ''{Enter}  , 'pDimension', ''{Enter}  , 'pSourceElement', ''{Enter}  , 'pTargetElement', ''{Enter}  , 'pSkipRules', 1{Enter}  , 'pZeroTarget', 1{Enter}  , 'pZeroSource', 0{Enter}  , 'pDestroyTempObj', 1{Enter}  , 'pDebug', 0{Enter});||||Bedrock.CubeSubmenu
+Bedrock.Cube.Data.Export||||ExecuteProcess('Bedrock.Cube.Data.Export'{Enter}  , 'pCube', ''{Enter}  , 'pView', ''{Enter}  , 'pFilter', ''{Enter}  , 'pDimensionDelim', '&'{Enter}  , 'pElementStartDelim', ':'{Enter}  , 'pElementDelim', '{+}'{Enter}  , 'pSkipRules', 1{Enter}  , 'pSkipCons', 1{Enter}  , 'pZeroSource', 0{Enter}  , 'pDestroyTempObj', 1{Enter}  , 'pFilePath', ''{Enter}  , 'pFileName', ''{Enter}  , 'pDebug', 0{Enter});||||Bedrock.CubeSubmenu
+Bedrock.Cube.Data.ExportToFile||||ExecuteProcess('Bedrock.Cube.Data.ExportToFile'{Enter}  , 'pCube', ''{Enter}  , 'pDimension', ''{Enter}  , 'pElement', ''{Enter}  , 'pFilePath', ''{Enter}  , 'pFileName', ''{Enter}  , 'pSkipRules', 1{Enter}  , 'pZeroSource', 0{Enter}  , 'pDebug', 0{Enter});||||Bedrock.CubeSubmenu
+Bedrock.Cube.Data.ImportFromFile||||ExecuteProcess('Bedrock.Cube.Data.ImportFromFile'{Enter}  , 'pSourceDir', ''{Enter}  , 'pSourceFile', ''{Enter}  , 'pCube', ''{Enter}  , 'pDimension', ''{Enter}  , 'pSourceElement', ''{Enter}  , 'pTargetElement', ''{Enter}  , 'pTitleRows', 1{Enter}  , 'pDelimiter', ''{Enter}  , 'pQuote', '"'{Enter}  , 'pCumulate', 0{Enter}  , 'pDebug', 0{Enter});||||Bedrock.CubeSubmenu
+Bedrock.Cube.Data.ViewExportToFile||||ExecuteProcess('Bedrock.Cube.Data.ViewExportToFile'{Enter}  , 'pCube', ''{Enter}  , 'pExportPath', ''{Enter}  , 'pExportFile', ''{Enter}  , 'pView', ''{Enter}  , 'pSkipRuleValues', 1{Enter}  , 'pSkipCalcValues', 1{Enter}  , 'pSkipNullValues', 1{Enter}  , 'pTitleRecord', 1{Enter}  , 'pDebug', 0{Enter});||||Bedrock.CubeSubmenu
+Bedrock.Cube.Data.ZeroOut||||ExecuteProcess('Bedrock.Cube.Data.ZeroOut'{Enter}  , 'pCube', ''{Enter}  , 'pDelimDim', '&'{Enter}  , 'pDelimElem', '{+}'{Enter}  , 'pFilter', ''{Enter}  , 'pDebug', 0{Enter});||||Bedrock.CubeSubmenu
+Bedrock.Cube.Delete||||ExecuteProcess('Bedrock.Cube.Delete'{Enter}  , 'pCubes', ''{Enter}  , 'pDelimiter', '&'{Enter}  , 'pDebug', 0{Enter});||||Bedrock.CubeSubmenu
+Bedrock.Cube.Dimension.Replace||||ExecuteProcess('Bedrock.Cube.Dimension.Replace'{Enter}  , 'pCube', ''{Enter}  , 'pSourceDim', ''{Enter}  , 'pTargetDim', ''{Enter}  , 'pDebug', 0{Enter});||||Bedrock.CubeSubmenu
+Bedrock.Cube.View.Create||||ExecuteProcess('Bedrock.Cube.View.Create'{Enter}  , 'pCube', ''{Enter}  , 'pView', ''{Enter}  , 'pFilter', ''{Enter}  , 'pSuppressZero', 1{Enter}  , 'pSuppressConsol', 1{Enter}  , 'pSuppressRules', 1{Enter}  , 'pDimensionDelim', '&'{Enter}  , 'pElementStartDelim', ':'{Enter}  , 'pElementDelim', '{+}'{Enter}  , 'pDebug', 0{Enter});||||Bedrock.CubeSubmenu
+Bedrock.Cube.View.Delete||||ExecuteProcess('Bedrock.Cube.View.Delete'{Enter}  , 'pCubes', ''{Enter}  , 'pViews', '}Bedrock*'{Enter}  , 'pDelimiter', '&'{Enter}  , 'pDebug', 0{Enter});||||Bedrock.CubeSubmenu
+Bedrock.Cube.View.Publish||||ExecuteProcess('Bedrock.Cube.View.Publish'{Enter}  , 'pClient', ''{Enter}  , 'pCube', ''{Enter}  , 'pView', ''{Enter}  , 'pSubPublish', 1{Enter}  , 'pOverwrite', 0{Enter}  , 'pDebug', 0{Enter});||||Bedrock.CubeSubmenu
+Bedrock.Cube.ViewAndSubsets.Create||||ExecuteProcess('Bedrock.Cube.ViewAndSubsets.Create'{Enter}  , 'pCube', ''{Enter}  , 'pSuppressZero', 1{Enter}  , 'pSuppressConsol', 1{Enter}  , 'pSuppressRules', 1{Enter}  , 'pDimensions', ''{Enter}  , 'pDelimiter', '&'{Enter}  , 'pView', ''{Enter}  , 'pSubset', ''{Enter}  , 'pDebug', 0{Enter});||||Bedrock.CubeSubmenu
+Bedrock.Cube.ViewAndSubsets.Delete||||ExecuteProcess('Bedrock.Cube.ViewAndSubsets.Delete'{Enter}  , 'pCube', ''{Enter}  , 'pView', ''{Enter}  , 'pSubset', ''{Enter}  , 'pMode', 0{Enter}  , 'pDebug', 0{Enter});||||Bedrock.CubeSubmenu
+Bedrock.Dim.AllConsols.Delete||||ExecuteProcess('Bedrock.Dim.AllConsols.Delete'{Enter}  , 'pDimension', ''{Enter}  , 'pDebug', 0{Enter});||||Bedrock.DimSubmenu
+Bedrock.Dim.AllElements.Delete||||ExecuteProcess('Bedrock.Dim.AllElements.Delete'{Enter}  , 'pDimension', ''{Enter}  , 'pDebug', 0{Enter});||||Bedrock.DimSubmenu
+Bedrock.Dim.Attr.Delete||||ExecuteProcess('Bedrock.Dim.Attr.Delete'{Enter}  , 'pDimension', ''{Enter}  , 'pAttribute', ''{Enter}  , 'pDebug', 0{Enter});||||Bedrock.DimSubmenu
+Bedrock.Dim.Attr.ImportFromFile||||ExecuteProcess('Bedrock.Dim.Attr.ImportFromFile'{Enter}  , 'pDimension', ''{Enter}  , 'pSourceDir', ''{Enter}  , 'pSourceFile', ''{Enter}  , 'pTitleRows', 1{Enter}  , 'pDelimiter', ''{Enter}  , 'pQuote', '"'{Enter}  , 'pDebug', 0{Enter});||||Bedrock.DimSubmenu
+Bedrock.Dim.Attr.Insert||||ExecuteProcess('Bedrock.Dim.Attr.Insert'{Enter}  , 'pDimension', ''{Enter}  , 'pPrevAttr', ''{Enter}  , 'pAttribute', ''{Enter}  , 'pAttributeType', ''{Enter}  , 'pDebug', 0{Enter});||||Bedrock.DimSubmenu
+Bedrock.Dim.Attr.SwapAlias||||ExecuteProcess('Bedrock.Dim.Attr.SwapAlias'{Enter}  , 'pDimension', ''{Enter}  , 'pAlias', ''{Enter}  , 'pDebug', 0{Enter});||||Bedrock.DimSubmenu
+Bedrock.Dim.Clone||||ExecuteProcess('Bedrock.Dim.Clone'{Enter}  , 'pSourceDim', ''{Enter}  , 'pTargetDim', ''{Enter}  , 'pAttr', 0{Enter}  , 'pDebug', 0{Enter});||||Bedrock.DimSubmenu
+Bedrock.Dim.CloneFromSubset.Flat||||ExecuteProcess('Bedrock.Dim.CloneFromSubset.Flat'{Enter}  , 'pSourceDim', ''{Enter}  , 'pSubset', ''{Enter}  , 'pTargetDim', ''{Enter}  , 'pAttr', 0{Enter}  , 'pDebug', 0{Enter});||||Bedrock.DimSubmenu
+Bedrock.Dim.CloneFromSubset||||ExecuteProcess('Bedrock.Dim.CloneFromSubset'{Enter}  , 'pSourceDim', ''{Enter}  , 'pSubset', ''{Enter}  , 'pTargetDim', ''{Enter}  , 'pAttr', 1{Enter}  , 'pDebug', 1{Enter});||||Bedrock.DimSubmenu
+Bedrock.Dim.Create||||ExecuteProcess('Bedrock.Dim.Create'{Enter}  , 'pDimension', ''{Enter}  , 'pDebug', 0{Enter});||||Bedrock.DimSubmenu
+Bedrock.Dim.Destroy||||ExecuteProcess('Bedrock.Dim.Destroy'{Enter}  , 'pDimension', ''{Enter}  , 'pDebug', 0{Enter});||||Bedrock.DimSubmenu
+Bedrock.Dim.Element.Create||||ExecuteProcess('Bedrock.Dim.Element.Create'{Enter}  , 'pDimension', ''{Enter}  , 'pElement', ''{Enter}  , 'pElementType', ''{Enter}  , 'pDebug', 0{Enter});||||Bedrock.DimSubmenu
+Bedrock.Dim.Element.Delete||||ExecuteProcess('Bedrock.Dim.Element.Delete'{Enter}  , 'pDimension', ''{Enter}  , 'pElement', ''{Enter}  , 'pDebug', 0{Enter});||||Bedrock.DimSubmenu
+Bedrock.Dim.Element.Move||||ExecuteProcess('Bedrock.Dim.Element.Move'{Enter}  , 'pDimension', ''{Enter}  , 'pElement', ''{Enter}  , 'pTargetConsol', ''{Enter}  , 'pAction', 'Add'{Enter}  , 'pElWeight', 1{Enter}  , 'pDebug', 0{Enter});||||Bedrock.DimSubmenu
+Bedrock.Dim.EmptyConsols.Delete||||ExecuteProcess('Bedrock.Dim.EmptyConsols.Delete'{Enter}  , 'pDimension', ''{Enter}  , 'pDebug', 0{Enter});||||Bedrock.DimSubmenu
+Bedrock.Dim.ExportToFile||||ExecuteProcess('Bedrock.Dim.ExportToFile'{Enter}  , 'pDimension', ''{Enter}  , 'pExportPath', ''{Enter}  , 'pExportFile', ''{Enter}  , 'pTitleRecord', 1{Enter}  , 'pDebug', 0{Enter});||||Bedrock.DimSubmenu
+Bedrock.Dim.Hierarchy.Unwind.All||||ExecuteProcess('Bedrock.Dim.Hierarchy.Unwind.All'{Enter}  , 'pDimension', ''{Enter}  , 'pDebug', 0{Enter});||||Bedrock.DimSubmenu
+Bedrock.Dim.Hierarchy.Unwind.Consolidation||||ExecuteProcess('Bedrock.Dim.Hierarchy.Unwind.Consolidation'{Enter}  , 'pDimension', ''{Enter}  , 'pConsol', ''{Enter}  , 'pRecursive', 0{Enter}  , 'pDebug', 0{Enter});||||Bedrock.DimSubmenu
+Bedrock.Dim.ImportFromFile||||ExecuteProcess('Bedrock.Dim.ImportFromFile'{Enter}  , 'pSourceDir', ''{Enter}  , 'pSourceFile', ''{Enter}  , 'pDimension', ''{Enter}  , 'pAlias', ''{Enter}  , 'pAction', 'Add'{Enter}  , 'pTitleRows', 2{Enter}  , 'pDelimiter', ''{Enter}  , 'pQuote', '"'{Enter}  , 'pDebug', 0{Enter});||||Bedrock.DimSubmenu
+Bedrock.Dim.Sub.Create.All||||ExecuteProcess('Bedrock.Dim.Sub.Create.All'{Enter}  , 'pDimension', ''{Enter}  , 'pSubset', ''{Enter}  , 'pAddToSubset', 0{Enter}  , 'pExclusions', ''{Enter}  , 'pDelimiter', '&'{Enter}  , 'pDebug', 0{Enter});||||Bedrock.DimSubmenu
+Bedrock.Dim.Sub.Create.Attribute.All||||ExecuteProcess('Bedrock.Dim.Sub.Create.Attribute.All'{Enter}  , 'pDimension', ''{Enter}  , 'pSubset', ''{Enter}  , 'pAttribute', ''{Enter}  , 'pAttributeValue', ''{Enter}  , 'pAddToSubset', 0{Enter}  , 'pExclusions', ''{Enter}  , 'pDelimiter', '&'{Enter}  , 'pDebug', 0{Enter});||||Bedrock.DimSubmenu
+Bedrock.Dim.Sub.Create.Attribute.Leaf||||ExecuteProcess('Bedrock.Dim.Sub.Create.Attribute.Leaf'{Enter}  , 'pDimension', ''{Enter}  , 'pSubset', ''{Enter}  , 'pAttribute', ''{Enter}  , 'pAttributeValue', ''{Enter}  , 'pAddToSubset', 0{Enter}  , 'pExclusions', ''{Enter}  , 'pDelimiter', '&'{Enter}  , 'pDebug', 0{Enter});||||Bedrock.DimSubmenu
+Bedrock.Dim.Sub.Create.ByElement||||ExecuteProcess('Bedrock.Dim.Sub.Create.ByElement'{Enter}  , 'pDimension', ''{Enter}  , 'pSubset', ''{Enter}  , 'pElements', ''{Enter}  , 'pDelimiter', '&'{Enter}  , 'pAddToSubset', 0{Enter}  , 'pDebug', 0{Enter});||||Bedrock.DimSubmenu
+Bedrock.Dim.Sub.Create.ByLevel||||ExecuteProcess('Bedrock.Dim.Sub.Create.ByLevel'{Enter}  , 'pDimension', ''{Enter}  , 'pSort', 0{Enter}  , 'pConvertStatic', 1{Enter}  , 'pDebug', 0{Enter});||||Bedrock.DimSubmenu
+Bedrock.Dim.Sub.Create.ByMDX||||ExecuteProcess('Bedrock.Dim.Sub.Create.ByMDX'{Enter}  , 'pDimension', ''{Enter}  , 'pSubset', ''{Enter}  , 'pMDXExpr', ''{Enter}  , 'pConvertToStatic', 1{Enter}  , 'pDebug', 0{Enter});||||Bedrock.DimSubmenu
+Bedrock.Dim.Sub.Create.Consolidation.All||||ExecuteProcess('Bedrock.Dim.Sub.Create.Consolidation.All'{Enter}  , 'pDimension', ''{Enter}  , 'pSubset', ''{Enter}  , 'pConsol', ''{Enter}  , 'pAddToSubset', 0{Enter}  , 'pExclusions', ''{Enter}  , 'pDelimiter', '&'{Enter}  , 'pDebug', 0{Enter});||||Bedrock.DimSubmenu
+Bedrock.Dim.Sub.Create.Consolidation.Leaf||||ExecuteProcess('Bedrock.Dim.Sub.Create.Consolidation.Leaf'{Enter}  , 'pDimension', ''{Enter}  , 'pSubset', ''{Enter}  , 'pConsol', ''{Enter}  , 'pAddToSubset', 0{Enter}  , 'pExclusions', ''{Enter}  , 'pDelimiter', '&'{Enter}  , 'pDebug', 0{Enter});||||Bedrock.DimSubmenu
+Bedrock.Dim.Sub.Create.Leaf||||ExecuteProcess('Bedrock.Dim.Sub.Create.Leaf'{Enter}  , 'pDimension', ''{Enter}  , 'pSubset', ''{Enter}  , 'pAddToSubset', 0{Enter}  , 'pExclusions', ''{Enter}  , 'pDelimiter', '&'{Enter}  , 'pDebug', 0{Enter});||||Bedrock.DimSubmenu
+Bedrock.Dim.Sub.Create.Orphans||||ExecuteProcess('Bedrock.Dim.Sub.Create.Orphans'{Enter}  , 'pDimension', ''{Enter}  , 'pDebug', 0{Enter});||||Bedrock.DimSubmenu
+Bedrock.Dim.Sub.Create||||ExecuteProcess('Bedrock.Dim.Sub.Create'{Enter}  , 'pDimension', ''{Enter}  , 'pSubset', ''{Enter}  , 'pConsol', ''{Enter}  , 'pAttribute', ''{Enter}  , 'pAttributeValue', ''{Enter}  , 'pLevelFrom', 0{Enter}  , 'pLevelTo', 20{Enter}  , 'pExclusions', ''{Enter}  , 'pDelimiter', '&'{Enter}  , 'pAddToSubset', 0{Enter}  , 'pDebug', 0{Enter});||||Bedrock.DimSubmenu
+Bedrock.Dim.Sub.Create.TopLevelHierarchy||||ExecuteProcess('Bedrock.Dim.Sub.Create.TopLevelHierarchy'{Enter}  , 'pDimension', ''{Enter}  , 'pSubset', ''{Enter}  , 'pConvertToStatic', 1{Enter}  , 'pDebug', 0{Enter});||||Bedrock.DimSubmenu
+Bedrock.Dim.Sub.Delete||||ExecuteProcess('Bedrock.Dim.Sub.Delete'{Enter}  , 'pDimensions', ''{Enter}  , 'pSubsets', '}Bedrock*'{Enter}  , 'pDelimiter', '&'{Enter}  , 'pDebug', 0{Enter});||||Bedrock.DimSubmenu
+Bedrock.Dim.Sub.Exclude||||ExecuteProcess('Bedrock.Dim.Sub.Exclude'{Enter}  , 'pDimension', ''{Enter}  , 'pSubset', ''{Enter}  , 'pElements', ''{Enter}  , 'pDelimiter', '&'{Enter}  , 'pDebug', 0{Enter});||||Bedrock.DimSubmenu
+Bedrock.Dim.Sub.ExportToFile||||ExecuteProcess('Bedrock.Dim.Sub.ExportToFile'{Enter}  , 'pDimension', ''{Enter}  , 'pSubset', ''{Enter}  , 'pExportPath', ''{Enter}  , 'pExportFile', ''{Enter}  , 'pTitleRecord', 1{Enter}  , 'pDebug', 0{Enter});||||Bedrock.DimSubmenu
+Bedrock.Security.Client.Create||||ExecuteProcess('Bedrock.Security.Client.Create'{Enter}  , 'pClients', ''{Enter}  , 'pPassword', ''{Enter}  , 'pMaxPorts', 5{Enter}  , 'pDelimiter', '&'{Enter}  , 'pDebug', 0{Enter});||||Bedrock.SecuritySubmenu
+Bedrock.Security.Client.Delete||||ExecuteProcess('Bedrock.Security.Client.Delete'{Enter}  , 'pClients', ''{Enter}  , 'pDelimiter', '&'{Enter}  , 'pDebug', 0{Enter});||||Bedrock.SecuritySubmenu
+Bedrock.Security.Client.Group.Assign||||ExecuteProcess('Bedrock.Security.Client.Group.Assign'{Enter}  , 'pClients', ''{Enter}  , 'pGroups', ''{Enter}  , 'pDelimiter', '&'{Enter}  , 'pAddOrRemove', 'Add'{Enter}  , 'pSecurityRefresh', 'Yes'{Enter}  , 'pDebug', 0{Enter});||||Bedrock.SecuritySubmenu
+Bedrock.Security.Client.Password.Reset||||ExecuteProcess('Bedrock.Security.Client.Password.Reset'{Enter}  , 'pClients', ''{Enter}  , 'pPassword', ''{Enter}  , 'pDelimiter', '&'{Enter}  , 'pDebug', 0{Enter});||||Bedrock.SecuritySubmenu
+Bedrock.Security.ClientGroupSetup||||ExecuteProcess('Bedrock.Security.ClientGroupSetup'{Enter}  , 'pClients', ''{Enter}  , 'pGroups', ''{Enter}  , 'pPassword', ''{Enter}  , 'pMaxPorts', 5{Enter}  , 'pDelimiter', '&'{Enter}  , 'pDebug', 0{Enter});||||Bedrock.SecuritySubmenu
+Bedrock.Security.Group.Create||||ExecuteProcess('Bedrock.Security.Group.Create'{Enter}  , 'pGroups', ''{Enter}  , 'pDelimiter', '&'{Enter}  , 'pDebug', 0{Enter});||||Bedrock.SecuritySubmenu
+Bedrock.Security.Group.Delete||||ExecuteProcess('Bedrock.Security.Group.Delete'{Enter}  , 'pGroups', ''{Enter}  , 'pDelimiter', '&'{Enter}  , 'pDebug', 0{Enter});||||Bedrock.SecuritySubmenu
+Bedrock.Security.Object.Assign||||ExecuteProcess('Bedrock.Security.Object.Assign'{Enter}  , 'pGroups', ''{Enter}  , 'pObjectType', ''{Enter}  , 'pObjects', ''{Enter}  , 'pSecurityLevel', ''{Enter}  , 'pSecurityRefresh', 'No'{Enter}  , 'pDelimiter', '&'{Enter}  , 'pDebug', 0{Enter});||||Bedrock.SecuritySubmenu
+Bedrock.Security.Refresh||||ExecuteProcess('Bedrock.Security.Refresh'{Enter}  , 'pDebug', 0{Enter});||||Bedrock.SecuritySubmenu
+Bedrock.Server.DataDir.Backup||||ExecuteProcess('Bedrock.Server.DataDir.Backup'{Enter}  , 'pDataDir', ''{Enter}  , 'pBackupDir', ''{Enter}  , 'pDebug', 0{Enter});||||Bedrock.ServerSubmenu
+Bedrock.Server.DataDir.ListContents||||ExecuteProcess('Bedrock.Server.DataDir.ListContents'{Enter}  , 'pDataDir', ''{Enter}  , 'pDebug', 1{Enter});||||Bedrock.ServerSubmenu
+Bedrock.Server.SaveDataAll||||ExecuteProcess('Bedrock.Server.SaveDataAll'{Enter}  , 'pDebug', 0{Enter});||||Bedrock.ServerSubmenu
+##############################################
+#
+# TI Functions
+#
+##############################################
+ASCIIDelete||||ASCIIDelete( sFileName );||||ASCIISubmenu
+ASCIIOutput||||ASCIIOutput( sFileName, sString1, sString2, sString3, ... );||||ASCIISubmenu
+SetInputCharacterSet||||SetInputCharacterSet( sCharSet );||||ASCIISubmenu
+SetOutputCharacterSet||||SetOutputCharacterSet( sFileName, sCharSet );||||ASCIISubmenu
+TextOutput||||TextOutput( sFileName, sString1, sString2, sString3, ... );||||ASCIISubmenu
+AttrDelete||||AttrDelete( sDim, sAttr );||||AttributeSubmenu
+AttrInsert||||AttrInsert( sDim, sPrevAttr, sAttr, sType );||||AttributeSubmenu
+AttrPutN||||AttrPutN( nValue, sDim, sEl, sAttr );||||AttributeSubmenu
+AttrPutS||||AttrPutS( sValue, sDim, sEl, sAttr );||||AttributeSubmenu
+ChoreQuit||||ChoreQuit;||||ChoreSubmenu
+SetChoreVerboseMessages||||SetChoreVerboseMessages( nValue );||||ChoreSubmenu
+CellGetN||||CellGetN( sCube, sEl1, sEl2, sEl3, ... );||||CubeSubmenu
+CellGetS||||CellGetS( sCube, sEl1, sEl2, sEl3, ... );||||CubeSubmenu
+CellIsUpdateable||||CellIsUpdateable( sCube, sEl1, sEl2, sEl3, ... );||||CubeSubmenu
+CellPutN||||CellPutN( nValue, sCube, sEl1, sEl2, sEl3, ... );||||CubeSubmenu
+CellPutProportionalSpread||||CellPutProportionalSpread( nValue, sCube, sEl1, sEl2, sEl3, ... );||||CubeSubmenu
+CellPutS||||CellPutS( sValue, sCube, sEl1, sEl2, sEl3, ... );||||CubeSubmenu
+CubeClearData||||CubeClearData( sCube );||||CubeSubmenu
+CubeCreate||||CubeCreate( sCube, sDim1, sDim2, sDim3, ... );||||CubeSubmenu
+CubeDestroy||||CubeDestroy( sCube );||||CubeSubmenu
+CubeExists||||CubeExists( sCube );||||CubeSubmenu
+CubeGetLogChanges||||CubeGetLogChanges( sCube );||||CubeSubmenu
+CubeSetLogChanges||||CubeSetLogChanges( sCube, nLogChanges );||||CubeSubmenu
+CubeUnload||||CubeUnload( sCube );||||CubeSubmenu
+DimensionCreate||||DimensionCreate( sDim );||||DimensionSubmenu
+DimensionDeleteAllElements||||DimensionDeleteAllElements( sDim );||||DimensionSubmenu
+DimensionDestroy||||DimensionDestroy( sDim );||||DimensionSubmenu
+DimensionElementComponentAdd||||DimensionElementComponentAdd( sDim, sConsol, sEl, nWeight );||||DimensionSubmenu
+DimensionElementComponentDelete||||DimensionElementComponentDelete( sDim, sConsol, sEl );||||DimensionSubmenu
+DimensionElementDelete||||DimensionElementDelete( sDim, sEl );||||DimensionSubmenu
+DimensionElementInsert||||DimensionElementInsert( sDim, sInsertionPoint, sEl, sType );||||DimensionSubmenu
+DimensionElementPrincipalName||||DimensionElementPrincipalName( sDim, sEl );||||DimensionSubmenu
+DimensionExists||||DimensionExists( sDim );||||DimensionSubmenu
+DimensionSortOrder||||DimensionSortOrder( sDim, sCompSortType, sCompSortOrder, sElSortType, sElSortOrder );||||DimensionSubmenu
+ODBCClose||||ODBCClose( sSource );||||ODBCSubmenu
+ODBCOpen||||ODBCOpen( sSource, sUserName, sPassword );||||ODBCSubmenu
+ODBCOPENEx||||ODBCOPENEx( sSource, sUserName, sPassword, sUseUnicodeODBC );||||ODBCSubmenu
+ODBCOutput||||ODBCOutput( sSource, sSQLQry1, sSQLQry2, ... );||||ODBCSubmenu
+SetODBCUnicodeInterface||||SetODBCUnicodeInterface = TRUE;||||ODBCSubmenu
+ExecuteCommand||||ExecuteCommand( sCommand, nWait );||||ProcessSubmenu
+ExecuteProcess||||ExecuteProcess( sProcess, sParam1, sParam1Value, sParam2, sParam2Value, ... );||||ProcessSubmenu
+GetProcessErrorFileDirectory||||GetProcessErrorFileDirectory;||||ProcessSubmenu
+GetProcessErrorFilename||||GetProcessErrorFilename;||||ProcessSubmenu
+GetProcessName||||GetProcessName();||||ProcessSubmenu
+If||||If( sValue @= sValue1 );`n  {#} Code to execute`n End If;||||ProcessSubmenu
+ItemReject||||ItemReject( sErrorString );||||ProcessSubmenu
+ItemSkip||||ItemSkip;||||ProcessSubmenu
+ProcessBreak||||ProcessBreak;||||ProcessSubmenu
+ProcessError||||ProcessError;||||ProcessSubmenu
+ProcessQuit||||ProcessQuit;||||ProcessSubmenu
+While||||While( nValue <= nValue1 );`n {#} Code to execute`n End;||||ProcessSubmenu
+CubeProcessFeeders||||CubeProcessFeeders( sCube );||||RuleSubmenu
+RuleLoadFromFile||||RuleLoadFromFile( sCube, sFilePath );||||RuleSubmenu
+ServerActiveSandboxGet||||ServerActiveSandboxGet();||||SandboxSubmenu
+ServerActiveSandboxSet||||ServerActiveSandboxSet( sSandboxName );||||SandboxSubmenu
+GetUseActiveSandboxProperty||||GetUseActiveSandboxProperty();||||SandboxSubmenu
+SetUseActiveSandboxProperty||||SetUseActiveSandboxProperty( nPropertyValue );||||SandboxSubmenu
+AddClient||||AddClient( sClientName );||||SecuritySubmenu
+AddGroup||||AddGroup( sGroupName );||||SecuritySubmenu
+AssignClientToGroup||||AssignClientToGroup( sClientName, sGroupName );||||SecuritySubmenu
+AssignClientPassword||||AssignClientPassword( sClientName, sPassword );||||SecuritySubmenu
+DeleteClient||||DeleteClient( sClientName );||||SecuritySubmenu
+DeleteGroup||||DeleteGroup( sGroupName );||||SecuritySubmenu
+ElementSecurityGet||||ElementSecurityGet( sDim, sEl, sGroupName );||||SecuritySubmenu
+ElementSecurityPut||||ElementSecurityPut( sSecurity, sDim, sEl, sGroupName );||||SecuritySubmenu
+RemoveClientFromGroup||||RemoveClientFromGroup( sClientName, sGroupName );||||SecuritySubmenu
+SecurityRefresh||||SecurityRefresh;||||SecuritySubmenu
+BatchUpdateFinish||||BatchUpdateFinish( nSaveChanges );||||ServerSubmenu
+BatchUpdateFinishWait||||BatchUpdateFinishWait( nSaveChanges );||||ServerSubmenu
+BatchUpdateStart||||BatchUpdateStart;||||ServerSubmenu
+DisableBulkLoadMode||||DisableBulkLoadMode();||||ServerSubmenu
+EnableBulkLoadMode||||EnableBulkLoadMode();||||ServerSubmenu
+SaveDataAll||||SaveDataAll;||||ServerSubmenu
+ServerShutdown||||ServerShutdown( nSaveData );||||ServerSubmenu
+SubsetAliasSet||||SubsetAliasSet( sDim, sSub, sAlias );||||SubsetSubmenu
+SubsetCreate||||SubsetCreate( sDim, sSub );||||SubsetSubmenu
+SubsetCreateByMDX||||SubsetCreateByMDX( sSub, sMDX );||||SubsetSubmenu
+SubsetDeleteAllElements||||SubsetDeleteAllElements( sDim, sSub );||||SubsetSubmenu
+SubsetDestroy||||SubsetDestroy( sDim, sSub );||||SubsetSubmenu
+SubsetElementDelete||||SubsetElementDelete( sDim, sSub, nIndex );||||SubsetSubmenu
+SubsetElementInsert||||SubsetElementInsert( sDim, sSub, sEl, nPosition );||||SubsetSubmenu
+SubsetExists||||SubsetExists( sDim, sSub );||||SubsetSubmenu
+SubsetExpandAboveSet||||SubsetExpandAboveSet( sDim, sSub, nExpandAbove );||||SubsetSubmenu
+SubsetFormatStyleSet||||SubsetFormatStyleSet( sDim, sSub, sFormatName );||||SubsetSubmenu
+SubsetGetElementName||||SubsetGetElementName( sDim, sSub, nElementIndex );||||SubsetSubmenu
+SubsetGetSize||||SubsetGetSize( sDim, sSub );||||SubsetSubmenu
+SubsetIsAllSet||||SubsetIsAllSet( sDim, sSub, nFlag );||||SubsetSubmenu
+PublishView||||PublishView( sCube, sView, nPublishPrivateSubset, nOverwrite );||||ViewSubmenu
+ViewColumnDimensionSet||||ViewColumnDimensionSet( sCube, sView, sDim, nPosition );||||ViewSubmenu
+ViewColumnSuppressZeroesSet||||ViewColumnSuppressZeroesSet( sCube, sView, nFlag );||||ViewSubmenu
+ViewConstruct||||ViewConstruct( sCube, sView );||||ViewSubmenu
+ViewCreate||||ViewCreate( sCube, sView );||||ViewSubmenu
+ViewDestroy||||ViewDestroy( sCube, sView );||||ViewSubmenu
+ViewExists||||ViewExists( sCube, sView );||||ViewSubmenu
+ViewExtractSkipCalcsSet||||ViewExtractSkipCalcsSet( sCube, sView, nFlag );||||ViewSubmenu
+ViewExtractSkipRuleValuesSet||||ViewExtractSkipRuleValuesSet( sCube, sView, nFlag );||||ViewSubmenu
+ViewExtractSkipZeroesSet||||ViewExtractSkipZeroesSet( sCube, sView, nFlag );||||ViewSubmenu
+ViewRowDimensionSet||||ViewRowDimensionSet( sCube, sView, sDim, nPosition );||||ViewSubmenu
+ViewRowSuppressZeroesSet||||ViewRowSuppressZeroesSet( sCube, sView, nFlag );||||ViewSubmenu
+ViewSubsetAssign||||ViewSubsetAssign( sCube, sView, sDim, sSub );||||ViewSubmenu
+ViewSuppressZeroesSet||||ViewSuppressZeroesSet( sCube, sView, nFlag );||||ViewSubmenu
+ViewTitleDimensionSet||||ViewTitleDimensionSet( sCube, sView, sDim );||||ViewSubmenu
+ViewTitleElementSet||||ViewTitleElementSet( sCube, sView, sDim, nIndex );||||ViewSubmenu
+ViewZeroOut||||ViewZeroOut( sCube, sView );||||ViewSubmenu
+DataSourceSAPUsingRoleAuths||||DataSourceSAPUsingRoleAuths = '0';||||MiscellaneousSubmenu
+DataSourceSAPUsingTexts||||DataSourceSAPUsingTexts = '0';||||MiscellaneousSubmenu
+Expand||||Expand( sString );||||MiscellaneousSubmenu
+FileExists||||FileExists( sFilePath );||||MiscellaneousSubmenu
+NumberToString||||NumberToString( nValue );||||MiscellaneousSubmenu
+NumberToStringEx||||NumberToStringEx( nValue, sFormatString, sDecimalSep, sThousandsSep  );||||MiscellaneousSubmenu
+RefreshMDXHierarchy||||RefreshMDXHierarchy( sDimName );||||MiscellaneousSubmenu
+StringToNumber||||StringToNumber( sString);||||MiscellaneousSubmenu
+StringToNumberEx||||StringToNumberEx( sString, sDecimalSep, sThousandsSep );||||MiscellaneousSubmenu
+TM1User||||TM1User();||||MiscellaneousSubmenu
+WildcardFileSearch||||WildcardFileSearch( sPath, sPriorFileName );||||MiscellaneousSubmenu
+
+AddInfoCubeRestriction||||AddInfoCubeRestriction( sChar, sSign, sCompOperator, sLowValue, sHighValue);||||LocalVariablesSubmenu
+DatasourceNameForServer||||DatasourceNameForServer = '';||||LocalVariablesSubmenu
+DatasourceNameForClient||||DatasourceNameForClient = '';||||LocalVariablesSubmenu
+DatasourceType||||DatasourceType = 'CHARACTERDELIMITED/POSITIONDELIMITED/ODBC/VIEW/SUBSET/...';||||LocalVariablesSubmenu
+DatasourceUsername||||DatasourceUsername = '';||||LocalVariablesSubmenu
+DatasourcePassword||||DatasourcePassword = '';||||LocalVariablesSubmenu
+DatasourceQuery||||DatasourceQuery = '';||||LocalVariablesSubmenu
+DatasourceCubeview||||DatasourceCubeview = '';||||LocalVariablesSubmenu
+DatasourceDimensionSubset||||DatasourceDimensionSubset = '';||||LocalVariablesSubmenu
+DatasourceASCIIDelimiter||||DatasourceASCIIDelimiter = '';||||LocalVariablesSubmenu
+DatasourceASCIIDecimalSeparator||||DatasourceASCIIDecimalSeparator = '';||||LocalVariablesSubmenu
+DatasourceASCIIThousandSeparator||||DatasourceASCIIThousandSeparator = '';||||LocalVariablesSubmenu
+DatasourceASCIIQuoteCharacter||||DatasourceASCIIQuoteCharacter = '';||||LocalVariablesSubmenu
+DatasourceASCIIHeaderRecords||||DatasourceASCIIHeaderRecords = 0;||||LocalVariablesSubmenu
+Value_Is_String||||Value_Is_String;||||LocalVariablesSubmenu
+NValue||||NValue;||||LocalVariablesSubmenu
+SValue||||SValue;||||LocalVariablesSubmenu
+OnMinorErrorDoItemSkip||||OnMinorErrorDoItemSkip = 0;||||LocalVariablesSubmenu
+MinorErrorLogMax||||MinorErrorLogMax = 0;||||LocalVariablesSubmenu
+DataSourceODBOCatalog||||DataSourceODBOCatalog = '';||||LocalVariablesSubmenu
+DataSourceODBOConnectionString||||DataSourceODBOConnectionString = '';||||LocalVariablesSubmenu
+DataSourceODBOCubeName||||DataSourceODBOCubeName = '';||||LocalVariablesSubmenu
+DataSourceODBOHierarchyName||||DataSourceODBOHierarchyName = '';||||LocalVariablesSubmenu
+DataSourceODBOLocation||||DataSourceODBOLocation = '';||||LocalVariablesSubmenu
+DataSourceODBOProvider||||DataSourceODBOProvider = '';||||LocalVariablesSubmenu
+DataSourceODBOSAPClientID||||DataSourceODBOSAPClientID = '';||||LocalVariablesSubmenu
+DataSourceODBOSAPClientLanguage||||DataSourceODBOSAPClientLanguage = '';||||LocalVariablesSubmenu
+NumericGlobalVariable||||NumericGlobalVariable('VariableName') = 0;||||GlobalVariablesSubmenu
+StringGlobalVariable||||StringGlobalVariable('VariableName') = '';||||GlobalVariablesSubmenu
+DataMinorErrorCount||||DataMinorErrorCount;||||ImplicitGlobalVariablesSubmenu
+MetadataMinorErrorCount||||MetadataMinorErrorCount;||||ImplicitGlobalVariablesSubmenu
+ProcessReturnCode||||ProcessReturnCode;||||ImplicitGlobalVariablesSubmenu
+PrologMinorErrorCount||||PrologMinorErrorCount;||||ImplicitGlobalVariablesSubmenu
+NumericSessionVariable||||NumericSessionVariable('VariableName') = 0;||||UserVariablesSubmenu
+StringSessionVariable||||StringSessionVariable('VariableName') = '';||||UserVariablesSubmenu
+
+Undef||||Undef;||||RuleCubeSubmenu
+Undefvals||||Undefvals;||||RuleCubeSubmenu
+Date||||Date( nSerialNumber, nReturnFourDigitYear );||||RuleDateSubmenu
+DateS||||DateS( nYear, nMonth, nDay );||||RuleDateSubmenu
+Day||||Day ( sDateString );||||RuleDateSubmenu
+DayNo||||DayNo ( sDateString );||||RuleDateSubmenu
+Month||||Month( sDateString );||||RuleDateSubmenu
+Now||||Now;||||RuleDateSubmenu
+Time||||Time;||||RuleDateSubmenu
+TimSt||||TimSt( nDateTime, sFormat[, nExtendedYears] );||||RuleDateSubmenu
+TimVl||||TimVl( nDateTime, sType[, nExtendedYears] );||||RuleDateSubmenu
+Today||||Today( [nReturnFourDigitYear] );||||RuleDateSubmenu
+Year||||Year( sDateString );||||RuleDateSubmenu
+AttrN||||AttrN( sDim, sEl, sAttr );||||RuleDimSubmenu
+AttrS||||AttrS( sDim, sEl, sAttr );||||RuleDimSubmenu
+Consolidatechildren||||Consolidatechildren( sDim1, sDim2, sDim3, ... );||||RuleDimSubmenu
+DimNm||||DimNm( sDim, nIndex );||||RuleDimSubmenu
+DimSiz||||DimSiz( sDim );||||RuleDimSubmenu
+DNext||||DNext( sDim, sEl );||||RuleDimSubmenu
+DnLev||||DnLev( sDim );||||RuleDimSubmenu
+TabDim||||TabDim( sCube, nIndex );||||RuleDimSubmenu
+DimIx||||DimIx( sDim, sEl );||||RuleElemSubmenu
+DType||||DType( sDim, sEl );||||RuleElemSubmenu
+ElComp||||ElComp( sDim, sEl, nPos );||||RuleElemSubmenu
+ElCompN||||ElCompN( sDim, sEl );||||RuleElemSubmenu
+ElIsAnc||||ElIsAnc( sDim, sEl1, sEl2 );||||RuleElemSubmenu
+ElIsComp||||ElIsComp( sDim, sEl1, sEl2 );||||RuleElemSubmenu
+ElIsPar||||ElIsPar( sDim, sEl1, sEl2 );||||RuleElemSubmenu
+ElLev||||ElLev( sDim, sEl );||||RuleElemSubmenu
+ElPar||||ElPar( sDim, sEl, nIndex );||||RuleElemSubmenu
+ElParN||||ElParN( sDim, sEl );||||RuleElemSubmenu
+ElWeight||||ElWeight( sDim, sElPar, sEl );||||RuleElemSubmenu
+Fv||||Fv( nPayment, nInterest, nPeriods );||||RuleFinancialSubmenu
+Paymt||||Paymt( nPrincipal, nInterest, nPeriods );||||RuleFinancialSubmenu
+Pv||||Pv( nPayment, nInterest, nPeriods );||||RuleFinancialSubmenu
+Abs||||Abs( nNumber );||||RuleMathSubmenu
+Acos||||Acos( nNumber );||||RuleMathSubmenu
+Asin||||Asin( nNumber );||||RuleMathSubmenu
+Atan||||Atan( nNumber );||||RuleMathSubmenu
+Cos||||Cos( nNumber );||||RuleMathSubmenu
+Exp||||Exp( nNumber );||||RuleMathSubmenu
+Int||||Int( nNumber );||||RuleMathSubmenu
+IsUnd||||IsUnd( nNumber );||||RuleMathSubmenu
+Ln||||Ln( nNumber );||||RuleMathSubmenu
+Log||||Log( nNumber );||||RuleMathSubmenu
+Max||||Max( nNumber1, nNumber2 );||||RuleMathSubmenu
+Min||||Min( nNumber1, nNumber2 );||||RuleMathSubmenu
+Mod||||Mod( nNumber, nDivisor );||||RuleMathSubmenu
+Rand||||Rand;||||RuleMathSubmenu
+Round||||Round( nNumber );||||RuleMathSubmenu
+RoundP||||RoundP( nNumber, nDecimal );||||RuleMathSubmenu
+Sign||||Sign( nNumber );||||RuleMathSubmenu
+Sin||||Sin( nNumber );||||RuleMathSubmenu
+Sqrt||||Sqrt( nNumber );||||RuleMathSubmenu
+Tan||||Tan( nNumber );||||RuleMathSubmenu
+Capit||||Capit( sString );||||RuleTextSubmenu
+Char||||Char( nNumber );||||RuleTextSubmenu
+Code||||Code( sString, nLocation );||||RuleTextSubmenu
+Delet||||Delet( sString, nStart, nNoOfChars );||||RuleTextSubmenu
+Fill||||Fill( sString, nLength );||||RuleTextSubmenu
+Insrt||||Insrt( sStringToInsert, sInsertInto, nLocation );||||RuleTextSubmenu
+Long||||Long( sString );||||RuleTextSubmenu
+Lower||||Lower( sString );||||RuleTextSubmenu
+Numbr||||Numbr( sString );||||RuleTextSubmenu
+Scan||||Scan( sSubstring, sString );||||RuleTextSubmenu
+Str||||Str( nNumber, nLength, nDecimal );||||RuleTextSubmenu
+Subst||||Subst( sString, nStart, nLength );||||RuleTextSubmenu
+Trim||||Trim( sString );||||RuleTextSubmenu
+Upper||||Upper( sString );||||RuleTextSubmenu

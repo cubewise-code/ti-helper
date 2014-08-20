@@ -1,0 +1,75 @@
+##############################################
+#
+# Format for functions is:
+# Function Name||||Function Code||||Parent Menu
+#
+##############################################
+Undef||||Undef;||||RuleCubeSubmenu1
+Undefvals||||Undefvals;||||RuleCubeSubmenu1
+Date||||Date( nSerialNumber, nReturnFourDigitYear );||||RuleDateSubmenu1
+DateS||||DateS( nYear, nMonth, nDay );||||RuleDateSubmenu1
+Day||||Day ( sDateString );||||RuleDateSubmenu1
+DayNo||||DayNo ( sDateString );||||RuleDateSubmenu1
+Month||||Month( sDateString );||||RuleDateSubmenu1
+Now||||Now;||||RuleDateSubmenu1
+Time||||Time;||||RuleDateSubmenu1
+TimSt||||TimSt( nDateTime, sFormat[, nExtendedYears] );||||RuleDateSubmenu1
+TimVl||||TimVl( nDateTime, sType[, nExtendedYears] );||||RuleDateSubmenu1
+Today||||Today( [nReturnFourDigitYear] );||||RuleDateSubmenu1
+Year||||Year( sDateString );||||RuleDateSubmenu1
+AttrN||||AttrN( sDim, sEl, sAttr );||||RuleDimSubmenu1
+AttrS||||AttrS( sDim, sEl, sAttr );||||RuleDimSubmenu1
+Consolidatechildren||||Consolidatechildren( sDim1, sDim2, sDim3, ... );||||RuleDimSubmenu1
+DimNm||||DimNm( sDim, nIndex );||||RuleDimSubmenu1
+DimSiz||||DimSiz( sDim );||||RuleDimSubmenu1
+DNext||||DNext( sDim, sEl );||||RuleDimSubmenu1
+DnLev||||DnLev( sDim );||||RuleDimSubmenu1
+TabDim||||TabDim( sCube, nIndex );||||RuleDimSubmenu1
+DimIx||||DimIx( sDim, sEl );||||RuleElemSubmenu1
+DType||||DType( sDim, sEl );||||RuleElemSubmenu1
+ElComp||||ElComp( sDim, sEl, nPos );||||RuleElemSubmenu1
+ElCompN||||ElCompN( sDim, sEl );||||RuleElemSubmenu1
+ElIsAnc||||ElIsAnc( sDim, sEl1, sEl2 );||||RuleElemSubmenu1
+ElIsComp||||ElIsComp( sDim, sEl1, sEl2 );||||RuleElemSubmenu1
+ElIsPar||||ElIsPar( sDim, sEl1, sEl2 );||||RuleElemSubmenu1
+ElLev||||ElLev( sDim, sEl );||||RuleElemSubmenu1
+ElPar||||ElPar( sDim, sEl, nIndex );||||RuleElemSubmenu1
+ElParN||||ElParN( sDim, sEl );||||RuleElemSubmenu1
+ElWeight||||ElWeight( sDim, sElPar, sEl );||||RuleElemSubmenu1
+Fv||||Fv( nPayment, nInterest, nPeriods );||||RuleFinancialSubmenu1
+Paymt||||Paymt( nPrincipal, nInterest, nPeriods );||||RuleFinancialSubmenu1
+Pv||||Pv( nPayment, nInterest, nPeriods );||||RuleFinancialSubmenu1
+Abs||||Abs( nNumber );||||RuleMathSubmenu1
+Acos||||Acos( nNumber );||||RuleMathSubmenu1
+Asin||||Asin( nNumber );||||RuleMathSubmenu1
+Atan||||Atan( nNumber );||||RuleMathSubmenu1
+Cos||||Cos( nNumber );||||RuleMathSubmenu1
+Exp||||Exp( nNumber );||||RuleMathSubmenu1
+Int||||Int( nNumber );||||RuleMathSubmenu1
+IsUnd||||IsUnd( nNumber );||||RuleMathSubmenu1
+Ln||||Ln( nNumber );||||RuleMathSubmenu1
+Log||||Log( nNumber );||||RuleMathSubmenu1
+Max||||Max( nNumber1, nNumber2 );||||RuleMathSubmenu1
+Min||||Min( nNumber1, nNumber2 );||||RuleMathSubmenu1
+Mod||||Mod( nNumber, nDivisor );||||RuleMathSubmenu1
+Rand||||Rand;||||RuleMathSubmenu1
+Round||||Round( nNumber );||||RuleMathSubmenu1
+RoundP||||RoundP( nNumber, nDecimal );||||RuleMathSubmenu1
+Sign||||Sign( nNumber );||||RuleMathSubmenu1
+Sin||||Sin( nNumber );||||RuleMathSubmenu1
+Sqrt||||Sqrt( nNumber );||||RuleMathSubmenu1
+Tan||||Tan( nNumber );||||RuleMathSubmenu1
+Capit||||Capit( sString );||||RuleTextSubmenu1
+Char||||Char( nNumber );||||RuleTextSubmenu1
+Code||||Code( sString, nLocation );||||RuleTextSubmenu1
+Delet||||Delet( sString, nStart, nNoOfChars );||||RuleTextSubmenu1
+Fill||||Fill( sString, nLength );||||RuleTextSubmenu1
+Insrt||||Insrt( sStringToInsert, sInsertInto, nLocation );||||RuleTextSubmenu1
+Long||||Long( sString );||||RuleTextSubmenu1
+Lower||||Lower( sString );||||RuleTextSubmenu1
+Numbr||||Numbr( sString );||||RuleTextSubmenu1
+Scan||||Scan( sSubstring, sString );||||RuleTextSubmenu1
+Str||||Str( nNumber, nLength, nDecimal );||||RuleTextSubmenu1
+Subst||||Subst( sString, nStart, nLength );||||RuleTextSubmenu1
+Trim||||Trim( sString );||||RuleTextSubmenu1
+Upper||||Upper( sString );||||RuleTextSubmenu1

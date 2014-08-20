@@ -1,0 +1,16 @@
+##############################################
+#
+# Note that the lines with only "||||" characters are for seperators in the menu
+# and also that the second part of the menu definition must align to what is in 
+# the functions.txt file
+#
+##############################################
+Snippets||||SnippetSubmenu1
+||||
+Rule.Cube||||RuleCubeSubmenu1
+Rule.DateTime||||RuleDateSubmenu1
+Rule.Dim||||RuleDimSubmenu1
+Rule.Element||||RuleElemSubmenu1
+Rule.Financial||||RuleFinancialSubmenu1
+Rule.Math||||RuleMathSubmenu1
+Rule.Text||||RuleTextSubmenu1

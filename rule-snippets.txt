@@ -1,0 +1,17 @@
+#########################################################################################
+#
+# Comment lines should begin with a '#' character
+#
+# To enter a new snippet, you must enter it in the format:
+# Snippet Name||||Snippet Code
+# Snippet Name = the text that will show up in the menu
+# Snippet Code = the text that will be sent to the TI editor window
+#
+# Notes:
+# - To add multiple lines to the 'Snippet code' use '{Enter}'.
+# - Some characters are reserved keys in autohotkey, suchas the # character
+#   in order to add these characters you must wrap them in the {} brackets (i.e., {#})
+#
+#########################################################################################
+Rule Template||||{#}{#}{#}{#}{#}{#}{#}{#}{#}{#}{Enter}{#} Cube xx Rules{Enter}{#} Created by:{Enter}{#}{#}{#}{#}{#}{#}{#}{#}{#}{#}{Enter}{Enter}SkipCheck;{Enter}{Enter}{Enter}Feeders;
+Feeder||||['Measure':'Quantity'] => ['Sales'];

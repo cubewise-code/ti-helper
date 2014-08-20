@@ -1,0 +1,39 @@
+##############################################
+#
+# Note that the lines with only "||||" characters are for seperators in the menu
+# and also that the second part of the menu definition must align to what is in 
+# the functions.txt file
+#
+##############################################
+Snippets||||SnippetSubmenu
+||||
+Bedrock.Cube||||Bedrock.CubeSubmenu
+Bedrock.Dim||||Bedrock.DimSubmenu
+Bedrock.Security||||Bedrock.SecuritySubmenu
+Bedrock.Server||||Bedrock.ServerSubmenu
+||||
+ASCII||||ASCIISubmenu
+Attribute||||AttributeSubmenu
+Chore||||ChoreSubmenu
+Dimension||||DimensionSubmenu
+ODBC||||ODBCSubmenu
+Process||||ProcessSubmenu
+Rule||||RuleSubmenu
+Sandbox||||SandboxSubmenu
+Security||||SecuritySubmenu
+Subset||||SubsetSubmenu
+View||||ViewSubmenu
+Miscellaneous||||MiscellaneousSubmenu
+||||
+Rule.Cube||||RuleCubeSubmenu
+Rule.DateTime||||RuleDateSubmenu
+Rule.Dim||||RuleDimSubmenu
+Rule.Element||||RuleElemSubmenu
+Rule.Financial||||RuleFinancialSubmenu
+Rule.Math||||RuleMathSubmenu
+Rule.Text||||RuleTextSubmenu
+||||
+Local Variables||||LocalVariablesSubmenu
+Global Variables||||GlobalVariablesSubmenu
+Implicit Global Variables||||ImplicitGlobalVariablesSubmenu
+User Variables||||UserVariablesSubmenu
