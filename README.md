@@ -1,5 +1,6 @@
-# ti-helper
-TI Helper is an Auto Hot Key script that can be used to enhance the options in the IBM Cognos TM1 Turbo Integrator (TI) process editor. It gives short cuts and options to generate code when using the TI editor.
+# [Download](https://code.cubewise.com/ti-helper) TI Helper from the [Cubewise Code website](https://code.cubewise.com/)
+
+**TI Helper** is an Auto Hot Key script that can be used to enhance the options in the IBM TM1 Turbo Integrator (TI) process editor. It gives short cuts and options to generate code when using the TI editor.
 
 To use:
 
