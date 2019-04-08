@@ -1,6 +1,5 @@
 ; TIHelper.ahk
 ; - Created by: Ashley Carey - 2011
-; - Updated by: Dvoynev Alexnder - 2019 - current date (ctrl+T); some new snippets and functions
 
 #Persistent
 #SingleInstance Force ; Only opens a single instance of the script so reopening won't cause multiple instances
