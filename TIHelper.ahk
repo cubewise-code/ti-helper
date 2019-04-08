@@ -1,5 +1,6 @@
-﻿; TIHelper.ahk
+; TIHelper.ahk
 ; - Created by: Ashley Carey - 2011
+; - Updated by: Dvoynev Alexnder - 2019 - current date (ctrl+T); some new snippets and functions
 
 #Persistent
 #SingleInstance Force ; Only opens a single instance of the script so reopening won't cause multiple instances
@@ -250,87 +251,131 @@ ruleMenuHandler:
 
 return
 
-
 ;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;	Commenting and uncommenting lines of TI code
 ;   To comment press Ctrl+K, to uncomment press Ctrl+U
 ;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-^k::
-	clipboard =
-	Send ^c
-	ClipWait, 1
+#IfWinActive Turbo Integrator:
+	^k::
+		ClipSaved := ClipboardAll   ; Save the entire clipboard to a variable of your choice.
+		Clipboard = ; clear Clipboard
+		Send ^c
+		ClipWait, 1
 
-	if ErrorLevel <> 0
-		return
+		if ErrorLevel <> 0
+			return
 
-	NewClip =
-	WaitingForFirstCharOfLine = y
-	AutoTrim, off
-	
-	nLines:= CountLines(clipboard)
-	
-	if(nLines = 1)
-		SendInput, {Home}{#}
-	else
-	{
-		NewClip = `#
+		NewClip =
+		WaitingForFirstCharOfLine = y
+		AutoTrim, off
+		
+		nLines:= CountLines(clipboard)
+		
+		if(nLines = 1)
+			SendInput, {Home}{#}
+		else
+		{
+			NewClip = `#
+			
+			Loop, parse, clipboard
+			{
+				if A_LoopField = `n
+					NewClip = %NewClip%%A_loopField%`#
+				else
+					NewClip = %NewClip%%A_LoopField%
+			}
+
+
+			clipboard = %NewClip%
+			Send, ^v
+		}
+		Sleep, 500 ; ClipWait does not work properly here when working via RDP
+		Clipboard := ClipSaved ; Restore the original clipboard. Note the use of Clipboard (not ClipboardAll).
+		ClipSaved =  ; Free the memory in case the clipboard was very large.
+	return
+
+	^u::
+		ClipSaved := ClipboardAll   ; Save the entire clipboard to a variable of your choice.
+		Clipboard = ; clear Clipboard
+		Send ^c
+
+		ClipWait, 1
+
+		if ErrorLevel <> 0
+			return
+
+		NewClip =
+		WaitingForFirstCharOfLine = y
+		AutoTrim, off
 		
 		Loop, parse, clipboard
 		{
-			if A_LoopField = `n
-				NewClip = %NewClip%%A_loopField%`#
-			else
-				NewClip = %NewClip%%A_LoopField%
-		}
-
-
-		clipboard = %NewClip%
-		Send, ^v
-	}
-return
-
-^u::
-	clipboard =
-	Send ^c
-
-	ClipWait, 1
-
-	if ErrorLevel <> 0
-		return
-
-	NewClip =
-	WaitingForFirstCharOfLine = y
-	AutoTrim, off
-	
-	Loop, parse, clipboard
-	{
-		if WaitingForFirstCharOfLine = y
-		{
-			if A_LoopField not in %A_Space%,%A_Tab%
+			if WaitingForFirstCharOfLine = y
 			{
-				if A_LoopField <> `#
-					NewClip = %NewClip%%A_LoopField%
+				if A_LoopField not in %A_Space%,%A_Tab%
+				{
+					if A_LoopField <> `#
+						NewClip = %NewClip%%A_LoopField%
 
-				WaitingForFirstCharOfLine = n
+					WaitingForFirstCharOfLine = n
+				}
+				else
+					NewClip = %NewClip%%A_LoopField%
 			}
 			else
+			{
+				if A_LoopField = `n
+					WaitingForFirstCharOfLine = y
+
 				NewClip = %NewClip%%A_LoopField%
+			}
 		}
-		else
-		{
-			if A_LoopField = `n
-				WaitingForFirstCharOfLine = y
+		clipboard = %NewClip%
+		Send, ^v
+		Sleep, 500 ; ClipWait does not work properly here when working via RDP
+		Clipboard := ClipSaved ; Restore the original clipboard. Note the use of Clipboard (not ClipboardAll).
+		ClipSaved =  ; Free the memory in case the clipboard was very large.
+	return
+RETURN
 
-			NewClip = %NewClip%%A_LoopField%
-		}
-	}
-	clipboard = %NewClip%
-	Send, ^v
-return
+;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;	Insert current date. Useful to comment last change date
+;   To insert date, press Ctrl+T
+;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;#IfWinActive
+#IfWinActive Turbo Integrator:
+	^T::
+		send, %A_DD%.%A_MM%.%A_YYYY%
+	return
+RETURN
 
+#IfWinActive Rules Editor:
+	^T::
+		send, %A_DD%.%A_MM%.%A_YYYY%
+	return
+RETURN
+
+;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;	Wrap the selected text to an unnamed region.
+;   To wrap, Ctrl+R
+;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#IfWinActive Rules Editor:
+	^R::
+		ClipSaved := ClipboardAll ; Save the entire clipboard to a variable of your choice.
+		Clipboard = ; clear Clipboard
+		Send ^x ; cut text to Clipboard
+		Send {#}Region {enter}
+		Send ^v ; paste new Clipboard
+		Send {enter}{#}Endregion
+		Sleep, 500 ; ClipWait does not work properly here when working via RDP
+		Clipboard := ClipSaved ; Restore the original clipboard. Note the use of Clipboard (not ClipboardAll).
+		ClipSaved =  ; Free the memory in case the clipboard was very large.
+	Return
+RETURN
 
 CountLines(Text)
 {  
  	 StringReplace, Text, Text, `n, `n, UseErrorLevel
 	 Return ErrorLevel + 1
 }
+
