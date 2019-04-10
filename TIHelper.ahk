@@ -1,4 +1,4 @@
-; TIHelper.ahk
+﻿; TIHelper.ahk
 ; - Created by: Ashley Carey - 2011
 
 #Persistent
@@ -255,88 +255,78 @@ return
 ;	Commenting and uncommenting lines of TI code
 ;   To comment press Ctrl+K, to uncomment press Ctrl+U
 ;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#IfWinActive Turbo Integrator:
-	^k::
-		ClipSaved := ClipboardAll   ; Save the entire clipboard to a variable of your choice.
-		Clipboard = ; clear Clipboard
-		Send ^c
-		ClipWait, 1
+^k::
+	clipboard =
+	Send ^c
+	ClipWait, 1
 
-		if ErrorLevel <> 0
-			return
+	if ErrorLevel <> 0
+		return
 
-		NewClip =
-		WaitingForFirstCharOfLine = y
-		AutoTrim, off
-		
-		nLines:= CountLines(clipboard)
-		
-		if(nLines = 1)
-			SendInput, {Home}{#}
-		else
-		{
-			NewClip = `#
-			
-			Loop, parse, clipboard
-			{
-				if A_LoopField = `n
-					NewClip = %NewClip%%A_loopField%`#
-				else
-					NewClip = %NewClip%%A_LoopField%
-			}
-
-
-			clipboard = %NewClip%
-			Send, ^v
-		}
-		Sleep, 500 ; ClipWait does not work properly here when working via RDP
-		Clipboard := ClipSaved ; Restore the original clipboard. Note the use of Clipboard (not ClipboardAll).
-		ClipSaved =  ; Free the memory in case the clipboard was very large.
-	return
-
-	^u::
-		ClipSaved := ClipboardAll   ; Save the entire clipboard to a variable of your choice.
-		Clipboard = ; clear Clipboard
-		Send ^c
-
-		ClipWait, 1
-
-		if ErrorLevel <> 0
-			return
-
-		NewClip =
-		WaitingForFirstCharOfLine = y
-		AutoTrim, off
+	NewClip =
+	WaitingForFirstCharOfLine = y
+	AutoTrim, off
+	
+	nLines:= CountLines(clipboard)
+	
+	if(nLines = 1)
+		SendInput, {Home}{#}
+	else
+	{
+		NewClip = `#
 		
 		Loop, parse, clipboard
 		{
-			if WaitingForFirstCharOfLine = y
-			{
-				if A_LoopField not in %A_Space%,%A_Tab%
-				{
-					if A_LoopField <> `#
-						NewClip = %NewClip%%A_LoopField%
-
-					WaitingForFirstCharOfLine = n
-				}
-				else
-					NewClip = %NewClip%%A_LoopField%
-			}
+			if A_LoopField = `n
+				NewClip = %NewClip%%A_loopField%`#
 			else
-			{
-				if A_LoopField = `n
-					WaitingForFirstCharOfLine = y
-
 				NewClip = %NewClip%%A_LoopField%
-			}
 		}
+
+
 		clipboard = %NewClip%
 		Send, ^v
-		Sleep, 500 ; ClipWait does not work properly here when working via RDP
-		Clipboard := ClipSaved ; Restore the original clipboard. Note the use of Clipboard (not ClipboardAll).
-		ClipSaved =  ; Free the memory in case the clipboard was very large.
-	return
-RETURN
+	}
+return
+
+^u::
+	clipboard =
+	Send ^c
+
+	ClipWait, 1
+
+	if ErrorLevel <> 0
+		return
+
+	NewClip =
+	WaitingForFirstCharOfLine = y
+	AutoTrim, off
+	
+	Loop, parse, clipboard
+	{
+		if WaitingForFirstCharOfLine = y
+		{
+			if A_LoopField not in %A_Space%,%A_Tab%
+			{
+				if A_LoopField <> `#
+					NewClip = %NewClip%%A_LoopField%
+
+				WaitingForFirstCharOfLine = n
+			}
+			else
+				NewClip = %NewClip%%A_LoopField%
+		}
+		else
+		{
+			if A_LoopField = `n
+				WaitingForFirstCharOfLine = y
+
+			NewClip = %NewClip%%A_LoopField%
+		}
+	}
+	clipboard = %NewClip%
+	Send, ^v
+return
 
 ;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;	Insert current date. Useful to comment last change date
@@ -378,4 +368,3 @@ CountLines(Text)
  	 StringReplace, Text, Text, `n, `n, UseErrorLevel
 	 Return ErrorLevel + 1
 }
-
